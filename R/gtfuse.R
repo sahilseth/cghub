@@ -1,5 +1,6 @@
 # path='/scratch/gtfuse';gtfuse='/usr/bin/gtfuse';key='/axis1/keys/cghubpvt.pem';cache='/scratch/gtfuseCache';
 # url='https://cghub.ucsc.edu/cghub/data/analysis/download/'
+#' @export
 gt.loadBamFile <- function(uuid,path='gtfuse',gtfuse='gtfuse',key='mykey.pem',
                            cache='~/gtfuseCache',url='https://cghub.ucsc.edu/cghub/data/analysis/download',force=FALSE){
   cmd <- sprintf("%s -c %s --inactivity-timeout=30 --cache-dir=%s -l syslog:standard %s/%s %s/%s",gtfuse,key,cache,url,uuid,
@@ -12,6 +13,7 @@ gt.loadBamFile <- function(uuid,path='gtfuse',gtfuse='gtfuse',key='mykey.pem',
   return(list.files(file.path(path,uuid,uuid),"bam",full.name=TRUE))
 }
 
+#' @export
 gt.unloadBamFile <- function(uuid, path='gtfuse', cache='gtfuseCache'){
   try(system(sprintf("rm -rf %s/%s*",cache,uuid)))
   try(system(sprintf("fusermount -u %s/%s",path,uuid)))

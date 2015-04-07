@@ -2,6 +2,8 @@
 
 export(gt.cgDownload)
 export(gt.cgquery)
+export(gt.loadBamFile)
+export(gt.unloadBamFile)
 import(RCurl)
 import(XML)
 importFrom(parallel,mclapply)
