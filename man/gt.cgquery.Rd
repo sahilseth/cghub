@@ -5,7 +5,7 @@
 \title{gt.cgquery}
 \usage{
 gt.cgquery(search, url = "https://cghub.ucsc.edu/cghub/metadata/analysisFull",
-  count.only, cores = 5)
+  count.only, cores = 1)
 }
 \arguments{
 \item{search}{}

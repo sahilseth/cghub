@@ -7,3 +7,6 @@ Date: 2015-03-07
 Author: Sahil Seth
 Maintainer: Sahil Seth <sseth@mdanderson.org>
 License: MIT
+Depends: XML,
+         RCurl,
+         parallel
