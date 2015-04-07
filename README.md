@@ -1,22 +1,24 @@
-
-## An interface for chatting with Cancer Genomics Hub
+# cghub: An interface for chatting with Cancer Genomics Hub
+April 7, 2015  
 
 [cghub.ucsc.edu](cghub.ucsc.edu)
 
 > this package is under active developement
 > Feel free to fork, log issues and submit pull requests
+> [https://github.com/sahilseth/cghub](https://github.com/sahilseth/cghub)
 
 
 
 
-## Installing the package
+# Installing the package
 
 ```r
 install.packages("devtools")
 devtools::install_github("sahilseth/cghub")
 ```
 
-## Query
+# Examples:
+## Querying
 For more on querying the database, please look at: 
 [https://cghub.ucsc.edu/docs/user/query.html](https://cghub.ucsc.edu/docs/user/query.html)
 
@@ -86,6 +88,7 @@ tab=do.call(rbind,tab)
 knitr::kable(head(out$tab), format = "markdown")
 ```
 
+## Fetching the data
 
 ### Load BAM using GTFuse
 
