@@ -23,18 +23,27 @@ Query is based on:
 
 ```r
 library(cghub)
-tumor = "CESC";library_strategy = "WGS"
-search=sprintf("study=phs000178&library_strategy=%s&state=live&disease_abbr=%s", 
-                                 library_strategy, tumor)
-out <- gt.cgquery(search = search, count.only = TRUE)
+out <- gt.cgquery(search = "tumor=CESC&library_strategy=WGS&study=phs000178&state=live",
+                  count.only = TRUE)
 ```
 
 ### Query and parse hits into a table
 
 
 ```r
-out <- gt.cgquery(search=sprintf("study=phs000178&library_strategy=WGS&state=live&disease_abbr=%s", tumor), 
-                  count.only = FALSE)
+s = c(
+  study = 'phs000178',
+  library_strategy = 'WGS',
+  disease_abbr = 'CESC',
+  state = 'live')
+search = paste(names(s), s, collapse = "&", sep = "=")
+search
+```
+
+[1] "study=phs000178&library_strategy=WGS&disease_abbr=CESC&state=live"
+
+```r
+out <- gt.cgquery(search = search, count.only = FALSE)
 names(out)
 ```
 
