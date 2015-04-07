@@ -1,6 +1,10 @@
 
-cghub: An interface for chatting with (cghub.ucsc.edu)
-========================================================
+## An interface for chatting with Cancer Genomics Hub
+
+[cghub.ucsc.edu](cghub.ucsc.edu)
+
+> this package is under active developement
+> Feel free to fork, log issues and submit pull requests
 
 
 
