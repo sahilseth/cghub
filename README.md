@@ -37,12 +37,7 @@ s = c(
   disease_abbr = 'CESC',
   state = 'live')
 search = paste(names(s), s, collapse = "&", sep = "=")
-search
-```
-
-[1] "study=phs000178&library_strategy=WGS&disease_abbr=CESC&state=live"
-
-```r
+#search
 out <- gt.cgquery(search = search, count.only = FALSE)
 names(out)
 ```
@@ -99,8 +94,9 @@ path=gt.loadBamFile(uuid='056a5a41-1be5-48f1-8ae5-bd8125e5b0c2', key="mykey.pem"
 - this supports providing multiple UUIDs
 
 ```r
-outBam <- gt.cgDownload(uuids=uuids, path="/scratch/gt", GT="GeneTorrent", cores=1,
-                          key="mykey.pem",params="")
+outBam <- gt.cgDownload(uuids=uuids, path="/scratch/gt", 
+                        GT="gtdownload", cores=1,
+                        key="mykey.pem",params="")
 ```
 
 
