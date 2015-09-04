@@ -8,7 +8,9 @@ Author: Sahil Seth
 Maintainer: Sahil Seth <sseth@mdanderson.org>
 License: MIT
 Depends: 
-  flowr,
   XML,
-         RCurl,
-         parallel
+  RCurl,
+  parallel
+Suggests:
+  flowr 
+  
