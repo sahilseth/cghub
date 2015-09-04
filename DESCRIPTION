@@ -2,11 +2,13 @@ Package: cghub
 Type: Package
 Title: An Interface enabling easy access to CGHub
 Description: This provides functions to query download and load (gtfuse) bam file and use them for subsequent analysis
-Version: 0.3
+Version: 0.3.9001
 Date: 2015-03-07
 Author: Sahil Seth
 Maintainer: Sahil Seth <sseth@mdanderson.org>
 License: MIT
-Depends: XML,
+Depends: 
+  flowr,
+  XML,
          RCurl,
          parallel
